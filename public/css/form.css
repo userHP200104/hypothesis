@@ -1,0 +1,38 @@
+:root {
+    --primary-font-family:  'Nunito Sans', sans-serif;
+ 
+    /* --gradient: linear-gradient(45deg, #FFDD99, #FF99BB); 
+    --colour-one: #FFDD99;
+    --colour-two: #FF99BB;
+    --colour-three: #4200FF;
+ 
+    --success-alert: #80FFBF;
+    --error-alert: #FF6666; */
+ 
+}
+
+/* base */
+
+body, h1, h2, h3, h4, h5, h6, p, .row{
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid{
+    padding: 16px;
+}
+
+.back_chevron{
+    font-size: 50px;
+    padding: 50px 32px 0px 32px;
+}
+
+.header{
+    font-family: var(--primary-font-family);
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.form{
+    padding: 0 110px;
+}

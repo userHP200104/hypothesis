@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Hello {% endblock %} 
+{% block stylesheet %} <link rel="stylesheet" type="text/css" href="{{ asset('../css/profile.css') }}"/> {% endblock %} 
+
+{% block body %}
+
+    <i class="fas fa-chevron-left back_chevron position-relative top-0 start-0 col-12"></i>
+    
+    <div class="profile_picture col-12"></div>
+
+    <div class="form_input row">
+
+        <div class="small_input row">
+            <input type="text" name="firstName" placeholder="First Name" class="col-5" value="{{Author.authFirstName}}">
+            <input type="text" name="lastName" placeholder="Last Name" class="col-5" value="{{Author.authLastName}}">
+        </div>
+
+        <div class="big_input row">
+            <input type="text" name="username" placeholder="Username" class="position-relative top-0 start-50 translate-middle-x col-12" value="{{Author.authUsername}}">
+            <input type="text" name="email" placeholder="Email" class="position-relative top-0 start-50 translate-middle-x col-12" value="{{Author.authEmail}}"
+            <input type="text" name="phoneNumber" placeholder="Phone Number" class="position-relative top-0 start-50 translate-middle-x col-12" value="{{Author.authPhoneNumber}}">
+            <input type="password" name="password" placeholder="Password" class="position-relative top-0 start-50 translate-middle-x col-12" value="{{Author.authPassword}}">
+        </div>
+
+    </div>
+
+    <div class="btns text-center">
+    
+        <div class="update_btn button col-4 position-relative top-0 start-50 translate-middle-x">Update</div>
+
+    </div>
+
+
+{% endblock %}

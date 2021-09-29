@@ -1,0 +1,37 @@
+{% extends "form.html.twig" %}
+
+{% block title %} Register {% endblock %} 
+
+{% block stylesheet %} <link rel="stylesheet" type="text/css" href="{{ asset('../css/registerSignIn.css') }}" />  {% endblock %} 
+
+{% block header%}<h1 class="header col-12 text-center"> Register </h1>{% endblock %}
+
+{% block form %}
+
+    <div class="profile_picture col-12"></div>
+
+    <div class="form_input row">
+
+        <div class="small_input row">
+            <input type="text" name="firstName" placeholder="First Name" class="col-5">
+            <input type="text" name="lastName" placeholder="Last Name" class="col-5">
+        </div>
+
+        <div class="big_input row">
+            <input type="text" name="username" placeholder="Username" class="position-relative top-0 start-50 translate-middle-x col-12">
+            <input type="text" name="email" placeholder="Email" class="position-relative top-0 start-50 translate-middle-x col-5">
+            <input type="text" name="phoneNumber" placeholder="Phone Number" class="position-relative top-0 start-50 translate-middle-x col-5">
+            <input type="password" name="password" placeholder="Password" class="position-relative top-0 start-50 translate-middle-x col-12">
+            <input type="password" name="passwordConfirm" placeholder="Confirm Password" class="position-relative top-0 start-50 translate-middle-x col-12">
+        </div>
+
+    </div>
+
+    <div class="btns text-center">
+    
+        <div class="register_btn button col-4 position-relative top-0 start-50 translate-middle-x">Register</div>
+        <div class="sign_in_btn button col-4 position-relative top-0 start-50 translate-middle-x">Sign In</div>
+
+    </div>
+    
+{% endblock %}

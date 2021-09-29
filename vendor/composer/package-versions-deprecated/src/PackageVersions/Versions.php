@@ -23,7 +23,7 @@ final class Versions
      * @deprecated please use {@see self::rootPackageName()} instead.
      *             This constant will be removed in version 2.0.0.
      */
-    const ROOT_PACKAGE_NAME = 'symfony/website-skeleton';
+    const ROOT_PACKAGE_NAME = '__root__';
 
     /**
      * Array of all available composer packages.
@@ -165,10 +165,10 @@ final class Versions
   'symfony/phpunit-bridge' => 'v5.3.7@2a1ff6e5a4521be1350bfce75784938e590d6342',
   'symfony/web-profiler-bundle' => 'v5.3.5@95fb24b09551688a09cffac95a2ddbb907833f07',
   'theseer/tokenizer' => '1.2.1@34a41e998c2183e22995f158c581e7b5e755ab9e',
-  'symfony/polyfill-ctype' => '*@',
-  'symfony/polyfill-iconv' => '*@',
-  'symfony/polyfill-php72' => '*@',
-  'symfony/website-skeleton' => 'v5.3.99@',
+  'symfony/polyfill-ctype' => '*@ca3fed47fe7c243d145d2e4d22d7e1fdf70bfdcc',
+  'symfony/polyfill-iconv' => '*@ca3fed47fe7c243d145d2e4d22d7e1fdf70bfdcc',
+  'symfony/polyfill-php72' => '*@ca3fed47fe7c243d145d2e4d22d7e1fdf70bfdcc',
+  '__root__' => 'dev-main@ca3fed47fe7c243d145d2e4d22d7e1fdf70bfdcc',
 );
 
     private function __construct()

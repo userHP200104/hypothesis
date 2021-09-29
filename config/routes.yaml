@@ -1,3 +1,3 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index: # name of route
+   path: / # /URL - Route
+   controller: App\Controller\HomeController::index # Path of the Route

@@ -2,18 +2,73 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
+        <title>{% block title %}hypothesis{% endblock %} | hypothesis</title>
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+
+        {% block stylesheet %}{% endblock %} 
+
     </head>
     <body>
-        {% block body %}{% endblock %}
+        
+        <div class="container-fluid">
+
+        <header class="header position-fixed top-0 start-0 col-12 row"> 
+            <img src="{{ asset('../assets/hypothesis_logo.svg')}}" class="logo position-relative top-50 start-0 translate-middle-y col-6">
+
+            <div class="register_sign_in_btn position-relative top-50 start-0 translate-middle-y col-6 row">
+                <div class="sign_in_btn register_sign_in_btn_props col-6 position-relative top-50 start-50 translate-middle-x">
+                    Sign In
+                </div>
+
+                <div class="register_btn register_sign_in_btn_props position-relative col-6 position-relative top-50 start-50 translate-middle-x">
+                    Register
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar position-fixed bottom-0 start-0 col-12">
+            <div class="container-fluid justify-content-center">
+                {# <a class="navbar-brand" href="#">Navbar</a> #}
+                <div id="navbarNav">
+                <ul class="nav">
+                    <li class="nav_btn">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-home active_nav nav_icon"></i>
+                    </a>
+                        Home
+                    </li>
+                    <li class="nav_btn">
+                    <a class="nav-link ask_link" href="#">
+                        <div class="ask_btn position-absolute top-50 start-50 translate-middle">
+                            <i class="fas fa-comment-alt nav_icon position-absolute top-50 start-50 translate-middle"></i>
+                        </div>
+                    </a>
+                        Ask Question
+                    </li>
+                    <li class="nav_btn">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-compass nav_icon"></i>
+                    </a>
+                        Explore
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+        {# the content of the page #}
+        <main class="container-fluid">
+            {% block body %}{% endblock %}
+        </main>
+
+        </div>
+        {% block javascripts %}{% endblock %}
     </body>
 </html>
