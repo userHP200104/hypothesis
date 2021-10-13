@@ -76,23 +76,34 @@ class __TwigTemplate_396ce399a45e841a3c407b8958fb7b8ce84e88a3a2adcdf96df70f267af
             <img src=\"";
         // line 24
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../assets/hypothesis_logo.svg"), "html", null, true);
-        echo "\" class=\"logo position-relative top-50 start-0 translate-middle-y col-6\">
+        echo "\" class=\"logo position-relative top-50 start-0 translate-middle-y col-6 col-sm-6 col-md-6 col-lg-4\">
 
-            <div class=\"register_sign_in_btn position-relative top-50 start-0 translate-middle-y col-6 row\">
+            <div class=\"search_container col-12 d-none d-sm-none d-md-none d-lg-block position-relative top-50 start-0 translate-middle-y col-6 col-sm-6 col-md-6 col-lg-4\">
+                <i class=\"fas fa-search search_icon\"></i>
+                <input type=\"text\" class=\"search_bar col-10\" placeholder=\"Search...\" spellcheck=\"true\" autocomplete=\"on\">
+                <select class=\"subject_select\">
+                    <option value=\"All\">All</option>
+                    <option value=\"Physics\">Physics</option>
+                    <option value=\"Chemistry\">Chemistry</option>
+                    <option value=\"Biology\">Biology</option>
+                </select>
+            </div>
+
+            <div class=\"register_sign_in_btn position-relative top-50 start-0 translate-middle-y col-6 col-sm-6 col-md-6 col-lg-4 row\">
                 <div class=\"sign_in_btn register_sign_in_btn_props col-6 position-relative top-50 start-50 translate-middle-x\">
-                    Sign In
+                    <a href=\"/sign-in\">Sign In</a>
                 </div>
 
                 <div class=\"register_btn register_sign_in_btn_props position-relative col-6 position-relative top-50 start-50 translate-middle-x\">
-                    Register
+                    <a href=\"/register\">Register</a>
                 </div>
             </div>
         </header>
 
-        <nav class=\"navbar position-fixed bottom-0 start-0 col-12\">
+        <nav class=\"navbar position-fixed bottom-0 start-0 col-12 d-block d-sm-block d-md-block d-lg-none\">
             <div class=\"container-fluid justify-content-center\">
                 ";
-        // line 40
+        // line 51
         echo "                <div id=\"navbarNav\">
                 <ul class=\"nav\">
                     <li class=\"nav_btn\">
@@ -120,19 +131,19 @@ class __TwigTemplate_396ce399a45e841a3c407b8958fb7b8ce84e88a3a2adcdf96df70f267af
             </div>
         </nav>
         ";
-        // line 67
+        // line 78
         echo "        <main class=\"container-fluid\">
             ";
-        // line 68
+        // line 79
         $this->displayBlock('body', $context, $blocks);
-        // line 69
+        // line 80
         echo "        </main>
 
         </div>
         ";
-        // line 72
+        // line 83
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 73
+        // line 84
         echo "    </body>
 </html>";
         
@@ -180,7 +191,7 @@ class __TwigTemplate_396ce399a45e841a3c407b8958fb7b8ce84e88a3a2adcdf96df70f267af
 
     }
 
-    // line 68
+    // line 79
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -198,7 +209,7 @@ class __TwigTemplate_396ce399a45e841a3c407b8958fb7b8ce84e88a3a2adcdf96df70f267af
 
     }
 
-    // line 72
+    // line 83
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -228,7 +239,7 @@ class __TwigTemplate_396ce399a45e841a3c407b8958fb7b8ce84e88a3a2adcdf96df70f267af
 
     public function getDebugInfo()
     {
-        return array (  202 => 72,  184 => 68,  166 => 16,  147 => 5,  136 => 73,  134 => 72,  129 => 69,  127 => 68,  124 => 67,  96 => 40,  78 => 24,  67 => 16,  53 => 5,  47 => 1,);
+        return array (  213 => 83,  195 => 79,  177 => 16,  158 => 5,  147 => 84,  145 => 83,  140 => 80,  138 => 79,  135 => 78,  107 => 51,  78 => 24,  67 => 16,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -256,20 +267,31 @@ class __TwigTemplate_396ce399a45e841a3c407b8958fb7b8ce84e88a3a2adcdf96df70f267af
         <div class=\"container-fluid\">
 
         <header class=\"header position-fixed top-0 start-0 col-12 row\"> 
-            <img src=\"{{ asset('../assets/hypothesis_logo.svg')}}\" class=\"logo position-relative top-50 start-0 translate-middle-y col-6\">
+            <img src=\"{{ asset('../assets/hypothesis_logo.svg')}}\" class=\"logo position-relative top-50 start-0 translate-middle-y col-6 col-sm-6 col-md-6 col-lg-4\">
 
-            <div class=\"register_sign_in_btn position-relative top-50 start-0 translate-middle-y col-6 row\">
+            <div class=\"search_container col-12 d-none d-sm-none d-md-none d-lg-block position-relative top-50 start-0 translate-middle-y col-6 col-sm-6 col-md-6 col-lg-4\">
+                <i class=\"fas fa-search search_icon\"></i>
+                <input type=\"text\" class=\"search_bar col-10\" placeholder=\"Search...\" spellcheck=\"true\" autocomplete=\"on\">
+                <select class=\"subject_select\">
+                    <option value=\"All\">All</option>
+                    <option value=\"Physics\">Physics</option>
+                    <option value=\"Chemistry\">Chemistry</option>
+                    <option value=\"Biology\">Biology</option>
+                </select>
+            </div>
+
+            <div class=\"register_sign_in_btn position-relative top-50 start-0 translate-middle-y col-6 col-sm-6 col-md-6 col-lg-4 row\">
                 <div class=\"sign_in_btn register_sign_in_btn_props col-6 position-relative top-50 start-50 translate-middle-x\">
-                    Sign In
+                    <a href=\"/sign-in\">Sign In</a>
                 </div>
 
                 <div class=\"register_btn register_sign_in_btn_props position-relative col-6 position-relative top-50 start-50 translate-middle-x\">
-                    Register
+                    <a href=\"/register\">Register</a>
                 </div>
             </div>
         </header>
 
-        <nav class=\"navbar position-fixed bottom-0 start-0 col-12\">
+        <nav class=\"navbar position-fixed bottom-0 start-0 col-12 d-block d-sm-block d-md-block d-lg-none\">
             <div class=\"container-fluid justify-content-center\">
                 {# <a class=\"navbar-brand\" href=\"#\">Navbar</a> #}
                 <div id=\"navbarNav\">

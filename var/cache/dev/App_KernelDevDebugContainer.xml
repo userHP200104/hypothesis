@@ -236,6 +236,7 @@
       <parameter>dev</parameter>
       <parameter>main</parameter>
     </parameter>
+    <parameter key="maker.compatible_check.doctrine.supports_attributes">true</parameter>
     <parameter key="data_collector.templates" type="collection">
       <parameter key="data_collector.request" type="collection">
         <parameter>request</parameter>
@@ -357,6 +358,21 @@
       <call method="setContainer">
         <argument type="service" id=".service_locator.W9y3dzm.App\Controller\SignInController"/>
       </call>
+    </service>
+    <service id="App\Form\AuthorForm" class="App\Form\AuthorForm" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Repository\AnswersRepository" class="App\Repository\AnswersRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\AuthorProfileRepository" class="App\Repository\AuthorProfileRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\QuestionsRepository" class="App\Repository\QuestionsRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
     </service>
     <service id="argument_metadata_factory" class="Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory"/>
     <service id="response_listener" class="Symfony\Component\HttpKernel\EventListener\ResponseListener">
@@ -931,9 +947,11 @@
       <argument type="service" id="form.registry"/>
       <argument type="collection">
         <argument>Symfony\Component\Form\Extension\Core\Type</argument>
+        <argument>App\Form</argument>
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\AuthorForm</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
@@ -1339,7 +1357,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.Za9MpXe"/>
+      <argument type="service" id=".service_locator.lAXKfmc"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -1912,6 +1930,10 @@
             <argument>/Users/h4n51n_pr3m4/Desktop/hypothesis/vendor/symfony/validator/Resources/translations/validators.mn.xlf</argument>
             <argument>/Users/h4n51n_pr3m4/Desktop/hypothesis/vendor/symfony/form/Resources/translations/validators.mn.xlf</argument>
             <argument>/Users/h4n51n_pr3m4/Desktop/hypothesis/vendor/symfony/security-core/Resources/translations/security.mn.xlf</argument>
+          </argument>
+          <argument key="my" type="collection">
+            <argument>/Users/h4n51n_pr3m4/Desktop/hypothesis/vendor/symfony/validator/Resources/translations/validators.my.xlf</argument>
+            <argument>/Users/h4n51n_pr3m4/Desktop/hypothesis/vendor/symfony/form/Resources/translations/validators.my.xlf</argument>
           </argument>
           <argument key="nb" type="collection">
             <argument>/Users/h4n51n_pr3m4/Desktop/hypothesis/vendor/symfony/validator/Resources/translations/validators.nb.xlf</argument>
@@ -4103,7 +4125,9 @@
     </service>
     <service id="maker.doctrine_helper" class="Symfony\Bundle\MakerBundle\Doctrine\DoctrineHelper">
       <argument>App\Entity</argument>
+      <argument type="service" id="maker.php_compat_util"/>
       <argument type="service" id="doctrine" on-invalid="ignore"/>
+      <argument>true</argument>
       <argument type="collection">
         <argument key="default" type="collection">
           <argument type="collection">
@@ -4122,6 +4146,7 @@
       <argument type="service" id="maker.file_manager"/>
       <argument>App</argument>
       <argument type="service" id="maker.php_compat_util"/>
+      <argument type="service" id="maker.template_component_generator"/>
     </service>
     <service id="maker.entity_class_generator" class="Symfony\Bundle\MakerBundle\Doctrine\EntityClassGenerator">
       <argument type="service" id="maker.generator"/>
@@ -4137,6 +4162,9 @@
     </service>
     <service id="maker.php_compat_util" class="Symfony\Bundle\MakerBundle\Util\PhpCompatUtil">
       <argument type="service" id="maker.file_manager"/>
+    </service>
+    <service id="maker.template_component_generator" class="Symfony\Bundle\MakerBundle\Util\TemplateComponentGenerator">
+      <argument type="service" id="maker.php_compat_util"/>
     </service>
     <service id="maker.maker.make_authenticator" class="Symfony\Bundle\MakerBundle\Maker\MakeAuthenticator">
       <tag name="maker.command"/>
@@ -4233,6 +4261,7 @@
       <argument type="service" id="maker.user_class_builder"/>
       <argument type="service" id="maker.security_config_updater"/>
       <argument type="service" id="maker.entity_class_generator"/>
+      <argument type="service" id="maker.doctrine_helper"/>
     </service>
     <service id="maker.maker.make_migration" class="Symfony\Bundle\MakerBundle\Maker\MakeMigration">
       <tag name="maker.command"/>
@@ -4398,7 +4427,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.Xbsa8iG"/>
+      <argument type="service" id=".service_locator.RY9Z1vm"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -5527,6 +5556,14 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SignInController" class="App\Controller\SignInController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SignInController" class="App\Controller\SignInController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SignInController" class="App\Controller\SignInController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\AuthorForm" class="App\Form\AuthorForm" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\AuthorForm" class="App\Form\AuthorForm" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\AnswersRepository" class="App\Repository\AnswersRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\AnswersRepository" class="App\Repository\AnswersRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\AuthorProfileRepository" class="App\Repository\AuthorProfileRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\AuthorProfileRepository" class="App\Repository\AuthorProfileRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\QuestionsRepository" class="App\Repository\QuestionsRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\QuestionsRepository" class="App\Repository\QuestionsRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.0GV1BZZ" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5915,9 +5952,10 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.Za9MpXe" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.lAXKfmc" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\AuthorForm" type="service_closure" id="App\Form\AuthorForm"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service_closure" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service_closure" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ColorType" type="service_closure" id="form.type.color"/>
@@ -6108,9 +6146,13 @@
       <argument type="service" id="cache.doctrine.orm.default.result"/>
       <factory class="Doctrine\Common\Cache\Psr6\DoctrineProvider" method="wrap"/>
     </service>
-    <service id=".service_locator.Xbsa8iG" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.RY9Z1vm" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument key="App\Repository\AnswersRepository" type="service_closure" id="App\Repository\AnswersRepository"/>
+        <argument key="App\Repository\AuthorProfileRepository" type="service_closure" id="App\Repository\AuthorProfileRepository"/>
+        <argument key="App\Repository\QuestionsRepository" type="service_closure" id="App\Repository\QuestionsRepository"/>
+      </argument>
     </service>
     <service id=".service_locator.KLVvNIq" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>

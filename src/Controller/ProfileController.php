@@ -5,6 +5,8 @@
     use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
     use Symfony\Component\Routing\Annotation\Route;
 
+    use App\Form\AuthorForm;
+
     use App\Entity\Author;
 
     // class controller for RegisterController
@@ -21,44 +23,44 @@
                 return $this->redirectToRoute("index");
             }
 
-            // acccess the wildcard value
-            $authorId = (int) $id;
+            // // acccess the wildcard value
+            // $authorId = (int) $id;
 
-            // dummy set
-            $neil = new Author();
-            $neil -> setId(1);
-            $neil ->setAuthFirstName("Neil");
-            $neil ->setAuthLastName("Tyson");
-            $neil ->setAuthUsername("TheRealNDT");
-            $neil ->setAuthEmail("neildt@nasa.com");
-            $neil ->setAuthPhoneNumber("02348954322");
-            $neil ->setAuthPassword("theB3st");
+            // // dummy set
+            // $neil = new Author();
+            // $neil -> setId(1);
+            // $neil ->setAuthFirstName("Neil");
+            // $neil ->setAuthLastName("Tyson");
+            // $neil ->setAuthUsername("TheRealNDT");
+            // $neil ->setAuthEmail("neildt@nasa.com");
+            // $neil ->setAuthPhoneNumber("02348954322");
+            // $neil ->setAuthPassword("theB3st");
 
-            $steven = new Author();
-            $steven -> setId(2);
-            $steven ->setAuthFirstName("Steven");
-            $steven ->setAuthLastName("Hawking");
-            $steven ->setAuthUsername("MRHAWKINGS");
-            $steven ->setAuthEmail("sthawking@haverd.edu");
-            $steven ->setAuthPhoneNumber("08934783923");
-            $steven ->setAuthPassword("mrBl4ckH0le");
+            // $steven = new Author();
+            // $steven -> setId(2);
+            // $steven ->setAuthFirstName("Steven");
+            // $steven ->setAuthLastName("Hawking");
+            // $steven ->setAuthUsername("MRHAWKINGS");
+            // $steven ->setAuthEmail("sthawking@haverd.edu");
+            // $steven ->setAuthPhoneNumber("08934783923");
+            // $steven ->setAuthPassword("mrBl4ckH0le");
             
-            $bill = new Author();
-            $bill -> setId(3);
-            $bill ->setAuthFirstName("Bill");
-            $bill ->setAuthLastName("Nye");
-            $bill ->setAuthUsername("BNTheScienceGuy");
-            $bill ->setAuthEmail("bntsg@pbs.com");
-            $bill ->setAuthPhoneNumber("076384783945");
-            $bill ->setAuthPassword("bnt5g123@!");
+            // $bill = new Author();
+            // $bill -> setId(3);
+            // $bill ->setAuthFirstName("Bill");
+            // $bill ->setAuthLastName("Nye");
+            // $bill ->setAuthUsername("BNTheScienceGuy");
+            // $bill ->setAuthEmail("bntsg@pbs.com");
+            // $bill ->setAuthPhoneNumber("076384783945");
+            // $bill ->setAuthPassword("bnt5g123@!");
 
-            // Add Friends
+            // // Add Friends
 
-            $neil ->setQuestions(5);
-            $steven ->setQuestions(20);
-            $bill ->setQuestions(34);
+            // $neil ->setQuestions(5);
+            // $steven ->setQuestions(20);
+            // $bill ->setQuestions(34);
 
-            $Authors = [$neil, $steven, $bill];
+            // $Authors = [$neil, $steven, $bill];
 
 
             // create a model

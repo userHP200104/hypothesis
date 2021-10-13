@@ -78,7 +78,7 @@ class __TwigTemplate_ca695ab74327475f49c972188c0b392005fb59c4428b1a9a463e8fcb7f2
         
         <div class=\"container-fluid\">
 
-                <i class=\"fas fa-chevron-left back_chevron position-relative top-0 start-0 col-12\"></i>
+                <i class=\"fas fa-chevron-left back_chevron position-relative top-0 start-0 col-12 d-block d-sm-block d-md-block d-lg-none\"></i>
 
                 ";
         // line 27
@@ -243,7 +243,7 @@ class __TwigTemplate_ca695ab74327475f49c972188c0b392005fb59c4428b1a9a463e8fcb7f2
         
         <div class=\"container-fluid\">
 
-                <i class=\"fas fa-chevron-left back_chevron position-relative top-0 start-0 col-12\"></i>
+                <i class=\"fas fa-chevron-left back_chevron position-relative top-0 start-0 col-12 d-block d-sm-block d-md-block d-lg-none\"></i>
 
                 {% block header%}{% endblock %}
 

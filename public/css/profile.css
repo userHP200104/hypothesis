@@ -23,23 +23,24 @@ body, h1, h2, h3, h4, h5, h6, p, .row{
     padding: 200px 32px 0px 32px;
 }
 
-.header{
+/* .header{
     height: 164px;
     background-color: #fff !important;
     box-shadow: 4px 0 50px #0000000f;
     border-radius: 0 0 28px 28px;
     border-bottom: 7px solid #000;
-}
+    z-index: 1;
+} */
 
-.logo{
+/* .logo{
     height: 64px;
-}
+} */
 
 .register_sign_in_btn{
     /* background-color: #f00; */
 }
 
-.register_sign_in_btn_props{
+/* .register_sign_in_btn_props{
     width: 164px;
     height: 64px;
     font-size: 24px;
@@ -62,7 +63,7 @@ body, h1, h2, h3, h4, h5, h6, p, .row{
     margin: -20px 0 0 -100px;
     box-shadow: 2px 0 10px hsla(0, 0%, 0%, 0.059);
 
-}
+} */
 
 .navbar{
     height: 140px;
@@ -72,6 +73,7 @@ body, h1, h2, h3, h4, h5, h6, p, .row{
     border-top: 7px solid #000;
     border-left: 7px solid #000;
     border-right: 7px solid #000;
+    z-index: 1;
 }
 
 .nav_btn{
@@ -121,7 +123,7 @@ body, h1, h2, h3, h4, h5, h6, p, .row{
     margin: 64px auto;
 }
 
-input{
+.profile_input{
     height: 84px;
     border: 7px solid #000000;
     border-radius: 16px;
@@ -179,3 +181,61 @@ input::placeholder{
     color: #000;
 }
 
+
+@media (min-width: 992px){
+
+    .profile_picture{
+        width: 164px;
+        height: 164px;
+        background-color: #FFD966;
+        border: 7px solid #000;
+        border-radius: 132px;
+        margin: 150px auto 50px auto;
+    }
+
+    .profile_input{
+        height: 64px;
+        border: 4px solid #000000;
+        border-radius: 16px;
+        margin: 40px 10px 0 0 !important;
+        padding-left: 16px !important;
+        font-family:var(--primary-font-family);
+        font-size: 24px;
+        font-weight: 700;
+        color: #000000;
+    }
+    
+    .form_input{
+        padding: 0 110px;
+    }
+
+    .small_input input:nth-child(1){
+        margin-right: 52px !important;
+        margin-left: 394px !important;
+    }
+
+    .small_input input{
+        min-width: 364px;
+    }
+
+    .btns{
+        font-family:var(--primary-font-family);
+        font-size: 32px;
+        font-weight: 700;
+        color: #000000;
+        padding-top: 20px;
+    }
+
+    .button{
+        height: 84px;
+        border: 7px solid #000000;
+        border-radius: 16px;
+        padding-top: 10px;
+        margin: 40px 0 24px 0;
+    }
+
+    .update_btn{
+        background-color: #FFD966;
+        color: #000;
+    }
+}

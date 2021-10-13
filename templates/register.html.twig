@@ -12,25 +12,38 @@
 
     <div class="form_input row">
 
-        <div class="small_input row">
-            <input type="text" name="firstName" placeholder="First Name" class="col-5">
-            <input type="text" name="lastName" placeholder="Last Name" class="col-5">
-        </div>
+        {# <div class="small_input row">
+            <input type="text" name="firstName" placeholder="First Name" class="col-5 col-md-5 col-lg-2">
+            <input type="text" name="lastName" placeholder="Last Name" class="col-5 col-md-5 col-lg-2">
+        </div> #}
 
-        <div class="big_input row">
-            <input type="text" name="username" placeholder="Username" class="position-relative top-0 start-50 translate-middle-x col-12">
-            <input type="text" name="email" placeholder="Email" class="position-relative top-0 start-50 translate-middle-x col-5">
-            <input type="text" name="phoneNumber" placeholder="Phone Number" class="position-relative top-0 start-50 translate-middle-x col-5">
-            <input type="password" name="password" placeholder="Password" class="position-relative top-0 start-50 translate-middle-x col-12">
-            <input type="password" name="passwordConfirm" placeholder="Confirm Password" class="position-relative top-0 start-50 translate-middle-x col-12">
+        {# <div class="big_input row">
+            <input type="text" name="username" placeholder="Username" class="position-relative top-0 start-50 translate-middle-x col-12 col-md-12 col-lg-6">
+            <input type="text" name="email" placeholder="Email" class="email position-relative top-0 start-50 translate-middle-x col-5 col-md-5 col-lg-2">
+            <input type="text" name="phoneNumber" placeholder="Phone Number" class="number position-relative top-0 start-50 translate-middle-x col-5 col-md-5 col-lg-2">
+            <input type="password" name="password" placeholder="Password" class="position-relative top-0 start-50 translate-middle-x col-12 col-md-12 col-lg-6">
+            <input type="password" name="passwordConfirm" placeholder="Confirm Password" class="position-relative top-0 start-50 translate-middle-x col-12 col-md-12 col-lg-6">
+        </div> #}
+
+        <div class="form_widget">
+            {{form_start(form, {'attr': {'no-validate': 'no-validate'}})}}
+                {{form_widget(form.authFirstName, {'attr': {'class' : 'form-control', 'placeholder': 'First Name', 'style':'height: 50px; width: 80%'}})}}
+                {{form_widget(form.authLastName, {'attr': {'class' : 'form-control', 'placeholder': 'Last Name', 'style':'height: 50px; width: 80%;'}})}}
+                {{form_widget(form.authUserName, {'attr': {'class' : 'form-control', 'placeholder': 'Username', 'style':'height: 50px; width: 80%'}})}}
+                {{form_widget(form.authEmail, {'attr': {'class' : 'form-control', 'placeholder': 'Email', 'style':'height: 50px; width: 80%'}})}}
+                {{form_widget(form.authPhoneNumber, {'attr': {'class' : 'form-control', 'placeholder': 'Phone Number', 'style':'height: 50px; width: 80%'}})}}
+                {{form_widget(form.authPassword, {'attr': {'class' : 'form-control', 'placeholder': 'Password', 'style':'height: 50px; width: 80%'}})}}
+            {{form_end(form)}}
         </div>
 
     </div>
 
     <div class="btns text-center">
     
-        <div class="register_btn button col-4 position-relative top-0 start-50 translate-middle-x">Register</div>
-        <div class="sign_in_btn button col-4 position-relative top-0 start-50 translate-middle-x">Sign In</div>
+        {# <div class="register_btn button col-4 col-md-4 col-lg-3 position-relative top-0 start-50 translate-middle-x">Register</div> #}
+        <div class="sign_in_btn button col-4 col-md-4 col-lg-3 position-relative top-0 start-50 translate-middle-x">
+            <a href="/sign-in" class="sign_in_anchor">Sign In</a>
+        </div>
 
     </div>
     

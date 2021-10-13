@@ -16,13 +16,23 @@ body, h1, h2, h3, h4, h5, h6, p, .row{
     padding: 0;
 }
 
+.sign_in_anchor, .sign_in_anchor:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+.register_anchor, .register_anchor:hover{
+    color: #000;
+    text-decoration: none;
+}
+
 .sign_in_header{
-    margin: 400px 0 72px 0;
+    margin: 164px 0 72px 0;
 }
 
 .profile_picture{
-    width: 264px;
-    height: 264px;
+    width: 200px;
+    height: 200px;
     background-color: #FFD966;
     border: 7px solid #000;
     border-radius: 132px;
@@ -79,7 +89,7 @@ input::placeholder{
     border: 7px solid #000000;
     border-radius: 16px;
     padding-top: 10px;
-    margin: 40px 0 24px 0;
+    margin: 0 0 24px 0;
 }
 
 .register_btn{
@@ -93,56 +103,179 @@ input::placeholder{
     
 }
 
-@media only screen and (min-width: 768px) {
+#author_form_signIn{
+    font-family: var(--primary-font-family);
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+    padding-top: 20px;
+    width: 385px;
+    height: 84px;
+    border: 7px solid #000000;
+    border-radius: 16px;
+    padding-top: 10px;
+    margin: 40px 0 24px 0;
+    background-color: #000;
+    color: #fff;
+}
+
+#author_form_register{
+    font-family: var(--primary-font-family);
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+    padding-top: 20px;
+    width: 385px;
+    height: 84px;
+    border: 7px solid #000000;
+    border-radius: 16px;
+    padding-top: 10px;
+    margin: 40px 0 24px 0;
+    background-color: #FFD966;
+    color: #000;
+    transform: translateX(107%);
+  }
+
+@media (min-width: 576px) and (max-width: 767.98px) {
     .profile_picture {
       width: 200px;
       height: 200px;
-      margin: 32px auto 23px auto;
+      margin: 100px auto 23px auto;
     }
 
     input{
         margin-top: 30px !important;
     }
 
-    .big_input input:nth-child(2){
+    .username{
+        min-width: 340px;
+        margin: 30px 0 0 -4px !important;
+    }
+    
+    .password{
+        min-width: 340px;
+        margin: 30px 0 0 -4px !important;
+        
+    }
+    
+    .email{
         min-width: 340px;
         margin: 30px 0 0 -194px !important;
     }
     
-    .big_input input:nth-child(3){
+    .number{
         min-width: 340px;
-        margin: 30px 0 0 48px !important;
+        margin: 30px 0 0 49px !important;
         
     }
-
     .button{
         margin-top: 20px;
     }
   }
 
-  @media only screen and (min-width: 768px) {
-    .profile_picture {
-      width: 200px;
-      height: 200px;
-      margin: 32px auto 23px auto;
-    }
+  .form_widget{
+    transform: translateX(10%);
+  }
+
+  .form_widget input{
+        height: 64px !important;
+        border: 4px solid #000000;
+        border-radius: 16px;
+        margin: 40px 0 0 0 !important;
+        padding-left: 16px !important;
+        font-family:var(--primary-font-family);
+        font-size: 24px;
+        font-weight: 700;
+        color: #000000;
+  }
+
+}
+    
+
+  @media (min-width: 992px){
 
     input{
-        margin-top: 30px !important;
+        height: 64px;
+        border: 4px solid #000000;
+        border-radius: 16px;
+        margin: 40px 0 0 0 !important;
+        padding-left: 16px !important;
+        font-family:var(--primary-font-family);
+        font-size: 24px;
+        font-weight: 700;
+        color: #000000;
+    }
+
+    .profile_picture{
+        width: 164px;
+        height: 164px;
+        background-color: #FFD966;
+        border: 7px solid #000;
+        border-radius: 132px;
+        margin: 80px auto 50px auto;
+    }
+
+    .profile_input{
+        height: 64px;
+        border: 4px solid #000000;
+        border-radius: 16px;
+        margin: 40px 10px 0 0 !important;
+        padding-left: 16px !important;
+        font-family:var(--primary-font-family);
+        font-size: 24px;
+        font-weight: 700;
+        color: #000000;
+    }
+    
+    .form_input{
+        padding: 0 110px;
+    }
+
+    .small_input input:nth-child(1){
+        margin-right: 42px !important;
+        margin-left: 334px !important;
     }
 
     .big_input input:nth-child(2){
-        min-width: 340px;
-        margin: 30px 0 0 -194px !important;
+        margin-right: 42px !important;
+        /* margin-left: 334px !important; */
+        min-width: 305px;
     }
-    
+
     .big_input input:nth-child(3){
-        min-width: 340px;
-        margin: 30px 0 0 48px !important;
-        
+        min-width: 305px;
+    }
+
+    .small_input input{
+        min-width: 305px;
+    }
+
+    .btns{
+        font-family:var(--primary-font-family);
+        font-size: 32px;
+        font-weight: 700;
+        color: #000000;
+        padding-top: 20px;
     }
 
     .button{
-        margin-top: 20px;
+        height: 84px;
+        border: 7px solid #000000;
+        border-radius: 16px;
+        padding-top: 10px;
+        margin: 40px 0 24px 0;
     }
-  }
+
+    .update_btn{
+        background-color: #FFD966;
+        color: #000;
+    }
+
+    .sign_in_header{
+        margin: 140px 0 72px 0 !important;
+    }
+
+    .header{
+        margin: 80px 0 0 0;
+    }
+}

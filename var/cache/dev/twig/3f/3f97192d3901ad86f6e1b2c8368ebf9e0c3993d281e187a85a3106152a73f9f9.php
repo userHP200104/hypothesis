@@ -87,7 +87,12 @@ class __TwigTemplate_fb782d710e4a3f325a0941cb77bf8b489216338713cdf48380b9d3909d2
 
         echo " <link rel=\"stylesheet\" type=\"text/css\" href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../css/main.css"), "html", null, true);
-        echo "\"/>  ";
+        echo "\"/>
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 6
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../css/newQuestion.css"), "html", null, true);
+        echo "\"/>
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -96,7 +101,7 @@ class __TwigTemplate_fb782d710e4a3f325a0941cb77bf8b489216338713cdf48380b9d3909d2
 
     }
 
-    // line 7
+    // line 9
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -106,11 +111,29 @@ class __TwigTemplate_fb782d710e4a3f325a0941cb77bf8b489216338713cdf48380b9d3909d2
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 8
-        echo "    <div id=\"home_body\" class=\"row col-12\">
-        <div class=\"search_container col-12\">
+        // line 10
+        echo "
+    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>
+
+    <div id=\"home_body\" class=\"row col-12\">
+
+        <div id=\"new_question_background\">
+            <form id=\"new_question_dialogue\">
+
+                <input type=\"text\" name=\"firstName\" placeholder=\"Enter Title Here\" class=\"ask_question_title\">
+                <i class=\"fas fa-times close_icon\"></i>
+                <textarea placeholder=\"Enter Question Here...\" class=\"ask_question_dialouge\"></textarea>
+                <button class=\"post_btn\">Post</button>
+
+            </form>
+        </div>
+
+        ";
+        // line 27
+        echo "
+        <div class=\"search_container col-12 d-block d-sm-block d-md-block d-lg-none\">
             <i class=\"fas fa-search search_icon\"></i>
-            <input type=\"text\" class=\"search_bar col-10\" placeholder=\"Search...\">
+            <input type=\"text\" class=\"search_bar col-10\" placeholder=\"Search...\" spellcheck=\"true\" autocomplete=\"on\">
             <select class=\"subject_select\">
                 <option value=\"All\">All</option>
                 <option value=\"Physics\">Physics</option>
@@ -119,7 +142,200 @@ class __TwigTemplate_fb782d710e4a3f325a0941cb77bf8b489216338713cdf48380b9d3909d2
             </select>
         </div>
 
+        ";
+        // line 40
+        echo "    
+        <div class=\"desktop_nav_container d-none d-sm-none d-md-none d-lg-block col-lg-4\">
+            <div class=\"desktop_navbar row\">
+                <div class=\"col-3\"></div>
+                <div class=\"nav_container col-9\">
+                    <h1 class=\"nav_menu_header\">Menu</h1>
+
+                        <div class=\"nav_btn nav_btn_active col-9\">
+                            <i class=\"fas fa-home nav_icon\"></i>
+                            Home
+                        </div>
+
+                    <a href=\"/explore\">
+                        <div class=\"nav_btn  col-9\">
+                            <i class=\"fas fa-compass nav_icon\"></i>
+                            Explore
+                        </div>
+                    </a>
+
+                    <a href=\"/my-answers\">
+                        <div class=\"nav_btn  col-9\">
+                            <i class=\"fas fa-comment-alt nav_icon\"></i>
+                            My Answers
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+            
+        </div>
+
+        <div class=\"desktop_question_container d-none d-sm-none d-md-none d-lg-block col-lg-4\">
+            <div class=\"question_box position-relative top-0 start-50 translate-middle-x col-12 row\">
+                <div class=\"gap col-1\">
+                    <div class=\"voter position-relative top-50 start-0 translate-middle-y\">
+                        <i class=\"fas fa-sort-up upvote position-relative top-0 start-50 translate-middle-y\"></i>
+                        <div class=\"vote_number position-relative top-0 start-50 translate-middle-y\">12k</div>
+                        <i class=\"fas fa-sort-down downvote position-relative bottom-0 start-50 translate-middle-y\"></i>
+                    </div>
+                </div>
+                <div class=\"col-10\">
+                    <h1 class=\"quetion_title\">What is a Black Hole?</h1>
+                    <div class=\"question\">
+                        I have become very intrested in astro physics lately and I was looking at the phenomenon of a black hole and I’ve done some research but do not fully understand what a black hole is, how it is formed and what it does. I have become very intrested in astro physics lately and I was looking at the phenomenon of a black hole and I’ve done some research but do not fully understand what a black hole is, how it is formed and what it does.
+                    </div>
+                    <div class=\"break_line\"></div>
+                    <div class=\"user\">
+                        <i class=\"far fa-user-circle user_profile\"></i>
+                        User
+                    </div>
+                    <div class=\"answers\">
+                        <i class=\"far fa-comment-alt answer_icon\"></i>
+                        50+
+                    </div>
+                </div>
+                <div class=\"gap col-1\"></div>            
+            </div>
+        </div>
+        ";
+        // line 99
+        echo "
+
+        <div class=\"desktop_rank_container d-none d-sm-none d-md-none d-lg-block col-lg-4\">
+            <div class=\"subject_filter position-relative top-0 start-50 translate-middle-x\">
+            
+                <label for=\"input-1\">
+                    <input type=\"radio\" id=\"input-1\" name=\"group\" checked/>
+                    <span class=\"btn\">
+                        <span class=\"btn-icon\">
+                            <img src=\"";
+        // line 108
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../assets/physics.svg"), "html", null, true);
+        echo "\" class=\"radio_icon\">
+                            <span class=\"btn-text\">
+                                Physics
+                            </span>
+                        </span>
+                    </span>
+                </label>
+
+                <label for=\"input-2\">
+                    <input type=\"radio\" id=\"input-2\" name=\"group\"/>
+                    <span class=\"btn\">
+                        <span class=\"btn-icon\">
+                            <img src=\"";
+        // line 120
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../assets/chemistry.svg"), "html", null, true);
+        echo "\" class=\"radio_icon\">
+                            <span class=\"btn-text\">
+                                Chemistry
+                            </span>
+                        </span>
+                    </span>
+                </label>
+
+                <label for=\"input-3\">
+                    <input type=\"radio\" id=\"input-3\" name=\"group\"/>
+                    <span class=\"btn\">
+                        <span class=\"btn-icon\">
+                            <img src=\"";
+        // line 132
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../assets/biology.svg"), "html", null, true);
+        echo "\" class=\"radio_icon\">
+                            <span class=\"btn-text\">
+                                Biology
+                            </span>
+                        </span>
+                    </span>
+                </label>
+            
+            </div>
+            <div class=\"author_rank_container position-relative top-0 start-50 translate-middle-x\">
+            
+                <h1 class=\"author_rank_title\">Top Authors:</h1>
+
+                <div class=\"author_rank\">
+                    <div class=\"rank\"> 
+                        <i class=\"far fa-user-circle user_rank_image\"></i>
+                        <div class=\"user_rank_name\">The_Mad_Scientist</div>
+                        <div class=\"user_rank_number\">1</div>
+                        <i class=\"fas fa-sort-up user_rank_level\"></i>
+                    </div>
+
+                        <div class=\"rank\"> 
+                        <i class=\"far fa-user-circle user_rank_image\"></i>
+                        <div class=\"user_rank_name\">The_Mad_Scientist</div>
+                        <div class=\"user_rank_number\">2</div>
+                        <i class=\"fas fa-sort-up user_rank_level\"></i>
+                    </div>
+
+                        <div class=\"rank\"> 
+                        <i class=\"far fa-user-circle user_rank_image\"></i>
+                        <div class=\"user_rank_name\">The_Mad_Scientist</div>
+                        <div class=\"user_rank_number\">3</div>
+                        <i class=\"fas fa-sort-up user_rank_level\"></i>
+                    </div>
+
+                        <div class=\"rank\"> 
+                        <i class=\"far fa-user-circle user_rank_image\"></i>
+                        <div class=\"user_rank_name\">The_Mad_Scientist</div>
+                        <div class=\"user_rank_number\">4</div>
+                        <i class=\"fas fa-sort-up user_rank_level\"></i>
+                    </div>
+
+                        <div class=\"rank\"> 
+                        <i class=\"far fa-user-circle user_rank_image\"></i>
+                        <div class=\"user_rank_name\">The_Mad_Scientist</div>
+                        <div class=\"user_rank_number\">5</div>
+                        <i class=\"fas fa-sort-up user_rank_level\"></i>
+                    </div>
+
+                        <div class=\"rank\"> 
+                        <i class=\"far fa-user-circle user_rank_image\"></i>
+                        <div class=\"user_rank_name\">The_Mad_Scientist</div>
+                        <div class=\"user_rank_number\">6</div>
+                        <i class=\"fas fa-sort-up user_rank_level\"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class=\"ask_question_btn position-relative top-0 start-50 translate-middle-x\">
+                <i class=\"fas fa-comment-alt ask_question\"></i>
+                Ask Question
+            </div>
+        </div>
+        
+
     </div>
+
+    <script>
+
+      \$(() => {
+    
+        console.log(\"ready\");
+
+        \$(\".ask_question_btn\").on(\"click\", function(){
+            \$(\"#new_question_background\").fadeIn();
+            console.log(\"fade in\");
+        });
+
+        \$(\".close_icon\").on(\"click\", function(){
+            \$(\"#new_question_background\").fadeOut();
+            console.log(\"fade out\");
+        });
+
+        \$(\".post_btn\").on(\"click\", function(){
+            \$(\"#new_question_background\").fadeOut();
+            console.log(\"fade out\");
+        });
+     });
+
+    </script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -141,7 +357,7 @@ class __TwigTemplate_fb782d710e4a3f325a0941cb77bf8b489216338713cdf48380b9d3909d2
 
     public function getDebugInfo()
     {
-        return array (  110 => 8,  100 => 7,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  248 => 132,  233 => 120,  218 => 108,  207 => 99,  147 => 40,  133 => 27,  115 => 10,  105 => 9,  93 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -150,13 +366,32 @@ class __TwigTemplate_fb782d710e4a3f325a0941cb77bf8b489216338713cdf48380b9d3909d2
 
 {% block title %} Home {% endblock %} 
 
-{% block stylesheet %} <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('../css/main.css') }}\"/>  {% endblock %} 
+{% block stylesheet %} <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('../css/main.css') }}\"/>
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('../css/newQuestion.css') }}\"/>
+{% endblock %} 
 
 {% block body %}
+
+    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>
+
     <div id=\"home_body\" class=\"row col-12\">
-        <div class=\"search_container col-12\">
+
+        <div id=\"new_question_background\">
+            <form id=\"new_question_dialogue\">
+
+                <input type=\"text\" name=\"firstName\" placeholder=\"Enter Title Here\" class=\"ask_question_title\">
+                <i class=\"fas fa-times close_icon\"></i>
+                <textarea placeholder=\"Enter Question Here...\" class=\"ask_question_dialouge\"></textarea>
+                <button class=\"post_btn\">Post</button>
+
+            </form>
+        </div>
+
+        {# only for mobile and ipad #}
+
+        <div class=\"search_container col-12 d-block d-sm-block d-md-block d-lg-none\">
             <i class=\"fas fa-search search_icon\"></i>
-            <input type=\"text\" class=\"search_bar col-10\" placeholder=\"Search...\">
+            <input type=\"text\" class=\"search_bar col-10\" placeholder=\"Search...\" spellcheck=\"true\" autocomplete=\"on\">
             <select class=\"subject_select\">
                 <option value=\"All\">All</option>
                 <option value=\"Physics\">Physics</option>
@@ -165,7 +400,189 @@ class __TwigTemplate_fb782d710e4a3f325a0941cb77bf8b489216338713cdf48380b9d3909d2
             </select>
         </div>
 
+        {# for desktop and ipad #}
+    
+        <div class=\"desktop_nav_container d-none d-sm-none d-md-none d-lg-block col-lg-4\">
+            <div class=\"desktop_navbar row\">
+                <div class=\"col-3\"></div>
+                <div class=\"nav_container col-9\">
+                    <h1 class=\"nav_menu_header\">Menu</h1>
+
+                        <div class=\"nav_btn nav_btn_active col-9\">
+                            <i class=\"fas fa-home nav_icon\"></i>
+                            Home
+                        </div>
+
+                    <a href=\"/explore\">
+                        <div class=\"nav_btn  col-9\">
+                            <i class=\"fas fa-compass nav_icon\"></i>
+                            Explore
+                        </div>
+                    </a>
+
+                    <a href=\"/my-answers\">
+                        <div class=\"nav_btn  col-9\">
+                            <i class=\"fas fa-comment-alt nav_icon\"></i>
+                            My Answers
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+            
+        </div>
+
+        <div class=\"desktop_question_container d-none d-sm-none d-md-none d-lg-block col-lg-4\">
+            <div class=\"question_box position-relative top-0 start-50 translate-middle-x col-12 row\">
+                <div class=\"gap col-1\">
+                    <div class=\"voter position-relative top-50 start-0 translate-middle-y\">
+                        <i class=\"fas fa-sort-up upvote position-relative top-0 start-50 translate-middle-y\"></i>
+                        <div class=\"vote_number position-relative top-0 start-50 translate-middle-y\">12k</div>
+                        <i class=\"fas fa-sort-down downvote position-relative bottom-0 start-50 translate-middle-y\"></i>
+                    </div>
+                </div>
+                <div class=\"col-10\">
+                    <h1 class=\"quetion_title\">What is a Black Hole?</h1>
+                    <div class=\"question\">
+                        I have become very intrested in astro physics lately and I was looking at the phenomenon of a black hole and I’ve done some research but do not fully understand what a black hole is, how it is formed and what it does. I have become very intrested in astro physics lately and I was looking at the phenomenon of a black hole and I’ve done some research but do not fully understand what a black hole is, how it is formed and what it does.
+                    </div>
+                    <div class=\"break_line\"></div>
+                    <div class=\"user\">
+                        <i class=\"far fa-user-circle user_profile\"></i>
+                        User
+                    </div>
+                    <div class=\"answers\">
+                        <i class=\"far fa-comment-alt answer_icon\"></i>
+                        50+
+                    </div>
+                </div>
+                <div class=\"gap col-1\"></div>            
+            </div>
+        </div>
+        {# desktop question container #}
+
+
+        <div class=\"desktop_rank_container d-none d-sm-none d-md-none d-lg-block col-lg-4\">
+            <div class=\"subject_filter position-relative top-0 start-50 translate-middle-x\">
+            
+                <label for=\"input-1\">
+                    <input type=\"radio\" id=\"input-1\" name=\"group\" checked/>
+                    <span class=\"btn\">
+                        <span class=\"btn-icon\">
+                            <img src=\"{{ asset('../assets/physics.svg')}}\" class=\"radio_icon\">
+                            <span class=\"btn-text\">
+                                Physics
+                            </span>
+                        </span>
+                    </span>
+                </label>
+
+                <label for=\"input-2\">
+                    <input type=\"radio\" id=\"input-2\" name=\"group\"/>
+                    <span class=\"btn\">
+                        <span class=\"btn-icon\">
+                            <img src=\"{{ asset('../assets/chemistry.svg')}}\" class=\"radio_icon\">
+                            <span class=\"btn-text\">
+                                Chemistry
+                            </span>
+                        </span>
+                    </span>
+                </label>
+
+                <label for=\"input-3\">
+                    <input type=\"radio\" id=\"input-3\" name=\"group\"/>
+                    <span class=\"btn\">
+                        <span class=\"btn-icon\">
+                            <img src=\"{{ asset('../assets/biology.svg')}}\" class=\"radio_icon\">
+                            <span class=\"btn-text\">
+                                Biology
+                            </span>
+                        </span>
+                    </span>
+                </label>
+            
+            </div>
+            <div class=\"author_rank_container position-relative top-0 start-50 translate-middle-x\">
+            
+                <h1 class=\"author_rank_title\">Top Authors:</h1>
+
+                <div class=\"author_rank\">
+                    <div class=\"rank\"> 
+                        <i class=\"far fa-user-circle user_rank_image\"></i>
+                        <div class=\"user_rank_name\">The_Mad_Scientist</div>
+                        <div class=\"user_rank_number\">1</div>
+                        <i class=\"fas fa-sort-up user_rank_level\"></i>
+                    </div>
+
+                        <div class=\"rank\"> 
+                        <i class=\"far fa-user-circle user_rank_image\"></i>
+                        <div class=\"user_rank_name\">The_Mad_Scientist</div>
+                        <div class=\"user_rank_number\">2</div>
+                        <i class=\"fas fa-sort-up user_rank_level\"></i>
+                    </div>
+
+                        <div class=\"rank\"> 
+                        <i class=\"far fa-user-circle user_rank_image\"></i>
+                        <div class=\"user_rank_name\">The_Mad_Scientist</div>
+                        <div class=\"user_rank_number\">3</div>
+                        <i class=\"fas fa-sort-up user_rank_level\"></i>
+                    </div>
+
+                        <div class=\"rank\"> 
+                        <i class=\"far fa-user-circle user_rank_image\"></i>
+                        <div class=\"user_rank_name\">The_Mad_Scientist</div>
+                        <div class=\"user_rank_number\">4</div>
+                        <i class=\"fas fa-sort-up user_rank_level\"></i>
+                    </div>
+
+                        <div class=\"rank\"> 
+                        <i class=\"far fa-user-circle user_rank_image\"></i>
+                        <div class=\"user_rank_name\">The_Mad_Scientist</div>
+                        <div class=\"user_rank_number\">5</div>
+                        <i class=\"fas fa-sort-up user_rank_level\"></i>
+                    </div>
+
+                        <div class=\"rank\"> 
+                        <i class=\"far fa-user-circle user_rank_image\"></i>
+                        <div class=\"user_rank_name\">The_Mad_Scientist</div>
+                        <div class=\"user_rank_number\">6</div>
+                        <i class=\"fas fa-sort-up user_rank_level\"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class=\"ask_question_btn position-relative top-0 start-50 translate-middle-x\">
+                <i class=\"fas fa-comment-alt ask_question\"></i>
+                Ask Question
+            </div>
+        </div>
+        
+
     </div>
+
+    <script>
+
+      \$(() => {
+    
+        console.log(\"ready\");
+
+        \$(\".ask_question_btn\").on(\"click\", function(){
+            \$(\"#new_question_background\").fadeIn();
+            console.log(\"fade in\");
+        });
+
+        \$(\".close_icon\").on(\"click\", function(){
+            \$(\"#new_question_background\").fadeOut();
+            console.log(\"fade out\");
+        });
+
+        \$(\".post_btn\").on(\"click\", function(){
+            \$(\"#new_question_background\").fadeOut();
+            console.log(\"fade out\");
+        });
+     });
+
+    </script>
 {% endblock %}
 ", "home.html.twig", "/Users/h4n51n_pr3m4/Desktop/hypothesis/templates/home.html.twig");
     }

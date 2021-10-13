@@ -131,16 +131,18 @@ class __TwigTemplate_f3896afb617e4e826deb7fa3b35375ca0c52f5f668a3a10a933a10da4a8
     <div class=\"form_input row\">
 
         <div class=\"big_input row\">
-            <input type=\"text\" name=\"username\" placeholder=\"Username\" class=\"position-relative top-0 start-50 translate-middle-x col-12\">
-            <input type=\"password\" name=\"password\" placeholder=\"Password\" class=\" position-relative top-0 start-50 translate-middle-x col-12\">
+            <input type=\"text\" name=\"username\" placeholder=\"Username\" class=\" username position-relative top-0 start-50 translate-middle-x col-12 col-md-12 col-lg-8\">
+            <input type=\"password\" name=\"password\" placeholder=\"Password\" class=\" password position-relative top-0 start-50 translate-middle-x col-12 col-md-12 col-lg-8\">
         </div>
 
     </div>
 
     <div class=\"btns text-center\">
     
-        <div class=\"sign_in_btn button col-4 position-relative top-0 start-50 translate-middle-x\">Sign In</div>
-        <div class=\"register_btn button col-4 position-relative top-0 start-50 translate-middle-x\">Register</div>
+        <div class=\"sign_in_btn button col-4 col-md-4 col-lg-3 position-relative top-0 start-50 translate-middle-x\">Sign In</div>
+        <div class=\"register_btn button col-4 col-md-4 col-lg-3 position-relative top-0 start-50 translate-middle-x\">
+            <a href=\"/register\" class=\"register_anchor\">Register</a>
+        </div>
 
     </div>
 
@@ -183,16 +185,18 @@ class __TwigTemplate_f3896afb617e4e826deb7fa3b35375ca0c52f5f668a3a10a933a10da4a8
     <div class=\"form_input row\">
 
         <div class=\"big_input row\">
-            <input type=\"text\" name=\"username\" placeholder=\"Username\" class=\"position-relative top-0 start-50 translate-middle-x col-12\">
-            <input type=\"password\" name=\"password\" placeholder=\"Password\" class=\" position-relative top-0 start-50 translate-middle-x col-12\">
+            <input type=\"text\" name=\"username\" placeholder=\"Username\" class=\" username position-relative top-0 start-50 translate-middle-x col-12 col-md-12 col-lg-8\">
+            <input type=\"password\" name=\"password\" placeholder=\"Password\" class=\" password position-relative top-0 start-50 translate-middle-x col-12 col-md-12 col-lg-8\">
         </div>
 
     </div>
 
     <div class=\"btns text-center\">
     
-        <div class=\"sign_in_btn button col-4 position-relative top-0 start-50 translate-middle-x\">Sign In</div>
-        <div class=\"register_btn button col-4 position-relative top-0 start-50 translate-middle-x\">Register</div>
+        <div class=\"sign_in_btn button col-4 col-md-4 col-lg-3 position-relative top-0 start-50 translate-middle-x\">Sign In</div>
+        <div class=\"register_btn button col-4 col-md-4 col-lg-3 position-relative top-0 start-50 translate-middle-x\">
+            <a href=\"/register\" class=\"register_anchor\">Register</a>
+        </div>
 
     </div>
 

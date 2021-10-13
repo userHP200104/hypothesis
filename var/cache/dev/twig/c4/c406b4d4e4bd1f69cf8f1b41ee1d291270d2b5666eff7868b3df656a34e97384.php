@@ -132,25 +132,56 @@ class __TwigTemplate_3e68fd0c95580acf5e890ec9fb7c26835cee683a8247dbe467687e42757
 
     <div class=\"form_input row\">
 
-        <div class=\"small_input row\">
-            <input type=\"text\" name=\"firstName\" placeholder=\"First Name\" class=\"col-5\">
-            <input type=\"text\" name=\"lastName\" placeholder=\"Last Name\" class=\"col-5\">
-        </div>
-
-        <div class=\"big_input row\">
-            <input type=\"text\" name=\"username\" placeholder=\"Username\" class=\"position-relative top-0 start-50 translate-middle-x col-12\">
-            <input type=\"text\" name=\"email\" placeholder=\"Email\" class=\"position-relative top-0 start-50 translate-middle-x col-5\">
-            <input type=\"text\" name=\"phoneNumber\" placeholder=\"Phone Number\" class=\"position-relative top-0 start-50 translate-middle-x col-5\">
-            <input type=\"password\" name=\"password\" placeholder=\"Password\" class=\"position-relative top-0 start-50 translate-middle-x col-12\">
-            <input type=\"password\" name=\"passwordConfirm\" placeholder=\"Confirm Password\" class=\"position-relative top-0 start-50 translate-middle-x col-12\">
+        ";
+        // line 19
+        echo "
+        ";
+        // line 27
+        echo "
+        <div class=\"form_widget\">
+            ";
+        // line 29
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 29, $this->source); })()), 'form_start', ["attr" => ["no-validate" => "no-validate"]]);
+        echo "
+                ";
+        // line 30
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 30, $this->source); })()), "authFirstName", [], "any", false, false, false, 30), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "First Name", "style" => "height: 50px; width: 80%"]]);
+        echo "
+                ";
+        // line 31
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 31, $this->source); })()), "authLastName", [], "any", false, false, false, 31), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Last Name", "style" => "height: 50px; width: 80%;"]]);
+        echo "
+                ";
+        // line 32
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 32, $this->source); })()), "authUserName", [], "any", false, false, false, 32), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Username", "style" => "height: 50px; width: 80%"]]);
+        echo "
+                ";
+        // line 33
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 33, $this->source); })()), "authEmail", [], "any", false, false, false, 33), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Email", "style" => "height: 50px; width: 80%"]]);
+        echo "
+                ";
+        // line 34
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 34, $this->source); })()), "authPhoneNumber", [], "any", false, false, false, 34), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Phone Number", "style" => "height: 50px; width: 80%"]]);
+        echo "
+                ";
+        // line 35
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 35, $this->source); })()), "authPassword", [], "any", false, false, false, 35), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Password", "style" => "height: 50px; width: 80%"]]);
+        echo "
+            ";
+        // line 36
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 36, $this->source); })()), 'form_end');
+        echo "
         </div>
 
     </div>
 
     <div class=\"btns text-center\">
     
-        <div class=\"register_btn button col-4 position-relative top-0 start-50 translate-middle-x\">Register</div>
-        <div class=\"sign_in_btn button col-4 position-relative top-0 start-50 translate-middle-x\">Sign In</div>
+        ";
+        // line 44
+        echo "        <div class=\"sign_in_btn button col-4 col-md-4 col-lg-3 position-relative top-0 start-50 translate-middle-x\">
+            <a href=\"/sign-in\" class=\"sign_in_anchor\">Sign In</a>
+        </div>
 
     </div>
     
@@ -175,7 +206,7 @@ class __TwigTemplate_3e68fd0c95580acf5e890ec9fb7c26835cee683a8247dbe467687e42757
 
     public function getDebugInfo()
     {
-        return array (  130 => 10,  120 => 9,  101 => 7,  80 => 5,  61 => 3,  38 => 1,);
+        return array (  182 => 44,  172 => 36,  168 => 35,  164 => 34,  160 => 33,  156 => 32,  152 => 31,  148 => 30,  144 => 29,  140 => 27,  137 => 19,  130 => 10,  120 => 9,  101 => 7,  80 => 5,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -194,25 +225,38 @@ class __TwigTemplate_3e68fd0c95580acf5e890ec9fb7c26835cee683a8247dbe467687e42757
 
     <div class=\"form_input row\">
 
-        <div class=\"small_input row\">
-            <input type=\"text\" name=\"firstName\" placeholder=\"First Name\" class=\"col-5\">
-            <input type=\"text\" name=\"lastName\" placeholder=\"Last Name\" class=\"col-5\">
-        </div>
+        {# <div class=\"small_input row\">
+            <input type=\"text\" name=\"firstName\" placeholder=\"First Name\" class=\"col-5 col-md-5 col-lg-2\">
+            <input type=\"text\" name=\"lastName\" placeholder=\"Last Name\" class=\"col-5 col-md-5 col-lg-2\">
+        </div> #}
 
-        <div class=\"big_input row\">
-            <input type=\"text\" name=\"username\" placeholder=\"Username\" class=\"position-relative top-0 start-50 translate-middle-x col-12\">
-            <input type=\"text\" name=\"email\" placeholder=\"Email\" class=\"position-relative top-0 start-50 translate-middle-x col-5\">
-            <input type=\"text\" name=\"phoneNumber\" placeholder=\"Phone Number\" class=\"position-relative top-0 start-50 translate-middle-x col-5\">
-            <input type=\"password\" name=\"password\" placeholder=\"Password\" class=\"position-relative top-0 start-50 translate-middle-x col-12\">
-            <input type=\"password\" name=\"passwordConfirm\" placeholder=\"Confirm Password\" class=\"position-relative top-0 start-50 translate-middle-x col-12\">
+        {# <div class=\"big_input row\">
+            <input type=\"text\" name=\"username\" placeholder=\"Username\" class=\"position-relative top-0 start-50 translate-middle-x col-12 col-md-12 col-lg-6\">
+            <input type=\"text\" name=\"email\" placeholder=\"Email\" class=\"email position-relative top-0 start-50 translate-middle-x col-5 col-md-5 col-lg-2\">
+            <input type=\"text\" name=\"phoneNumber\" placeholder=\"Phone Number\" class=\"number position-relative top-0 start-50 translate-middle-x col-5 col-md-5 col-lg-2\">
+            <input type=\"password\" name=\"password\" placeholder=\"Password\" class=\"position-relative top-0 start-50 translate-middle-x col-12 col-md-12 col-lg-6\">
+            <input type=\"password\" name=\"passwordConfirm\" placeholder=\"Confirm Password\" class=\"position-relative top-0 start-50 translate-middle-x col-12 col-md-12 col-lg-6\">
+        </div> #}
+
+        <div class=\"form_widget\">
+            {{form_start(form, {'attr': {'no-validate': 'no-validate'}})}}
+                {{form_widget(form.authFirstName, {'attr': {'class' : 'form-control', 'placeholder': 'First Name', 'style':'height: 50px; width: 80%'}})}}
+                {{form_widget(form.authLastName, {'attr': {'class' : 'form-control', 'placeholder': 'Last Name', 'style':'height: 50px; width: 80%;'}})}}
+                {{form_widget(form.authUserName, {'attr': {'class' : 'form-control', 'placeholder': 'Username', 'style':'height: 50px; width: 80%'}})}}
+                {{form_widget(form.authEmail, {'attr': {'class' : 'form-control', 'placeholder': 'Email', 'style':'height: 50px; width: 80%'}})}}
+                {{form_widget(form.authPhoneNumber, {'attr': {'class' : 'form-control', 'placeholder': 'Phone Number', 'style':'height: 50px; width: 80%'}})}}
+                {{form_widget(form.authPassword, {'attr': {'class' : 'form-control', 'placeholder': 'Password', 'style':'height: 50px; width: 80%'}})}}
+            {{form_end(form)}}
         </div>
 
     </div>
 
     <div class=\"btns text-center\">
     
-        <div class=\"register_btn button col-4 position-relative top-0 start-50 translate-middle-x\">Register</div>
-        <div class=\"sign_in_btn button col-4 position-relative top-0 start-50 translate-middle-x\">Sign In</div>
+        {# <div class=\"register_btn button col-4 col-md-4 col-lg-3 position-relative top-0 start-50 translate-middle-x\">Register</div> #}
+        <div class=\"sign_in_btn button col-4 col-md-4 col-lg-3 position-relative top-0 start-50 translate-middle-x\">
+            <a href=\"/sign-in\" class=\"sign_in_anchor\">Sign In</a>
+        </div>
 
     </div>
     
