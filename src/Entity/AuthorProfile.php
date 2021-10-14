@@ -48,12 +48,12 @@ class AuthorProfile
     private $authPassword;
 
     /**
-     * @ORM\Column(type="boolean", nullable=true , options={"default":0})
+     * @ORM\Column(type="boolean", nullable=true , options={"default":false})
      */
     private $ban_status;
 
     /**
-     * @ORM\Column(type="boolean", nullable=true , options={"default":0})
+     * @ORM\Column(type="boolean", nullable=true , options={"default":false})
      */
     private $admin_status;
 

@@ -5647,3 +5647,13 @@ d183e8,::1,GET,http://localhost:8000/favicon.ico,1634124478,07eeec,404
 b8c440,::1,GET,http://localhost:8000/favicon.ico,1634124513,266b3b,404
 266b3b,::1,GET,http://localhost:8000/favicon.ico,1634124513,,404
 73faf7,::1,GET,http://localhost:8000/sign-in,1634124515,,200
+bd0ab3,::1,GET,http://localhost:8000/favicon.ico,1634134653,2ddb28,404
+2ddb28,::1,GET,http://localhost:8000/favicon.ico,1634134653,,404
+ca8003,::1,GET,http://localhost:8000/register,1634135014,,200
+a8bda9,::1,GET,http://localhost:8000/explore,1634135172,,200
+b221f0,::1,GET,http://localhost:8000/my-answers,1634135173,,200
+4f81fa,::1,GET,http://localhost:8000/explore,1634135174,,200
+153653,::1,GET,http://localhost:8000/,1634135175,,200
+5299fa,::1,GET,http://localhost:8000/explore,1634135177,,200
+0d0f1d,::1,GET,http://localhost:8000/my-answers,1634135178,,200
+ae168d,::1,GET,http://localhost:8000/explore,1634135180,,200
