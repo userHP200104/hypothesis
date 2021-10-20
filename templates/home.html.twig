@@ -2,8 +2,26 @@
 
 {% block title %} Home {% endblock %} 
 
-{% block stylesheet %} <link rel="stylesheet" type="text/css" href="{{ asset('../css/main.css') }}"/>
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('../css/main.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('../css/newQuestion.css') }}"/>
+{% endblock %} 
+
+{% block session %}
+    {% if (username) %}
+            {{username}} logged in
+        {% else %}
+            <div class="register_sign_in_btn position-relative top-50 start-0 translate-middle-y col-6 col-sm-6 col-md-6 col-lg-4 row">
+                <div class="sign_in_btn register_sign_in_btn_props col-6 position-relative top-50 start-50 translate-middle-x">
+                    <a href="/sign-in">Sign In</a>
+                </div>
+
+                <div class="register_btn register_sign_in_btn_props position-relative col-6 position-relative top-50 start-50 translate-middle-x">
+                    <a href="/register">Register</a>
+                </div>
+            </div>
+        {% endif %}
+
 {% endblock %} 
 
 {% block body %}
@@ -15,10 +33,18 @@
         <div id="new_question_background">
             <form id="new_question_dialogue">
 
-                <input type="text" name="firstName" placeholder="Enter Title Here" class="ask_question_title">
-                <i class="fas fa-times close_icon"></i>
+                <div class="form_widget">
+                    <i class="fas fa-times close_icon"></i>
+                    {{form_start(form, {'attr': {'no-validate': 'no-validate'}})}}
+                        {{form_widget(form.question_title, {'attr': {'class' : 'form-control ask_question_title', 'placeholder': 'Enter Title'}})}}
+                        {{form_widget(form.question, {'attr': {'class' : 'form-control ask_question_dialouge', 'placeholder': 'Enter Question Here..'}})}}
+                        {{form_widget(form.post, {'attr': {'class' : 'form-control post_btn', 'placeholder': 'Enter Question Here..'}})}}
+                    {{form_end(form)}}
+                </div>
+
+                {# <input type="text" name="firstName" placeholder="Enter Title Here" class="ask_question_title">
                 <textarea placeholder="Enter Question Here..." class="ask_question_dialouge"></textarea>
-                <button class="post_btn">Post</button>
+                <button class="post_btn">Post</button> #}
 
             </form>
         </div>
@@ -196,27 +222,8 @@
 
     </div>
 
-    <script>
+{% endblock %}
 
-      $(() => {
-    
-        console.log("ready");
-
-        $(".ask_question_btn").on("click", function(){
-            $("#new_question_background").fadeIn();
-            console.log("fade in");
-        });
-
-        $(".close_icon").on("click", function(){
-            $("#new_question_background").fadeOut();
-            console.log("fade out");
-        });
-
-        $(".post_btn").on("click", function(){
-            $("#new_question_background").fadeOut();
-            console.log("fade out");
-        });
-     });
-
-    </script>
+{% block javascripts %}
+    <script src="../js/addQuestion.js"></script>
 {% endblock %}

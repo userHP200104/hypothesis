@@ -1,6 +1,6 @@
 {% extends "base.html.twig" %}
 
-{% block title %} {{Author.authFirstName}} {{Author.authLastName}} {% endblock %} 
+{% block title %} {{author.authFirstName}} {{author.authLastName}} {% endblock %} 
 {% block stylesheet %}
     <link rel="stylesheet" type="text/css" href="{{ asset('../css/main.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('../css/profile.css') }}"/>
@@ -15,15 +15,15 @@
     <div class="form_input row">
 
         <div class="small_input row">
-            <input type="text" name="firstName" placeholder="First Name" class="col-5 col-md-5 col-lg-2 profile_input" value="{{Author.authFirstName}}">
-            <input type="text" name="lastName" placeholder="Last Name" class="col-5 col-md-5 col-lg-2 profile_input" value="{{Author.authLastName}}">
+            <input type="text" name="firstName" placeholder="First Name" class="col-5 col-md-5 col-lg-2 profile_input" value="{{author.authFirstName}}">
+            <input type="text" name="lastName" placeholder="Last Name" class="col-5 col-md-5 col-lg-2 profile_input" value="{{author.authLastName}}">
         </div>
 
         <div class="big_input row">
-            <input type="text" name="username" placeholder="Username" class="position-relative top-0 start-50 translate-middle-x col-12 col-md-12 col-lg-6 profile_input" value="{{Author.authUsername}}">
-            <input type="text" name="email" placeholder="Email" class="position-relative top-0 start-50 translate-middle-x col-12 col-md-12 col-lg-6 profile_input" value="{{Author.authEmail}}"
-            <input type="text" name="phoneNumber" placeholder="Phone Number" class="position-relative top-0 start-50 translate-middle-x col-12 col-md-12 col-lg-6 profile_input" value="{{Author.authPhoneNumber}}">
-            <input type="password" name="password" placeholder="Password" class="position-relative top-0 start-50 translate-middle-x col-12 col-md-12 col-lg-6 profile_input" value="{{Author.authPassword}}">
+            <input type="text" name="username" placeholder="Username" class="position-relative top-0 start-50 translate-middle-x col-12 col-md-12 col-lg-6 profile_input" value="{{author.authUsername}}">
+            <input type="text" name="email" placeholder="Email" class="position-relative top-0 start-50 translate-middle-x col-12 col-md-12 col-lg-6 profile_input" value="{{author.authEmail}}"
+            <input type="text" name="phoneNumber" placeholder="Phone Number" class="position-relative top-0 start-50 translate-middle-x col-12 col-md-12 col-lg-6 profile_input" value="{{author.authPhoneNumber}}">
+            <input type="password" name="password" placeholder="Password" class="position-relative top-0 start-50 translate-middle-x col-12 col-md-12 col-lg-6 profile_input" value="{{author.authPassword}}">
         </div>
 
     </div>

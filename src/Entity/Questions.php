@@ -33,17 +33,6 @@ class Questions
      */
     private $question;
 
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $upvotes;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $downvotes;
-
-
 
     public function getId(): ?int
     {
@@ -82,30 +71,6 @@ class Questions
     public function setQuestion(string $question): self
     {
         $this->question = $question;
-
-        return $this;
-    }
-
-    public function getUpvotes(): ?int
-    {
-        return $this->upvotes;
-    }
-
-    public function setUpvotes(int $upvotes): self
-    {
-        $this->upvotes = $upvotes;
-
-        return $this;
-    }
-
-    public function getDownvotes(): ?int
-    {
-        return $this->downvotes;
-    }
-
-    public function setDownvotes(int $downvotes): self
-    {
-        $this->downvotes = $downvotes;
 
         return $this;
     }

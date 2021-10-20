@@ -10,19 +10,20 @@
     
     <div class="form_input row">
 
-        <div class="big_input row">
-            <input type="text" name="username" placeholder="Username" class=" username position-relative top-0 start-50 translate-middle-x col-12 col-md-12 col-lg-8">
-            <input type="password" name="password" placeholder="Password" class=" password position-relative top-0 start-50 translate-middle-x col-12 col-md-12 col-lg-8">
+        <div class="form_widget">
+            {{form_start(form, {'attr': {'no-validate': 'no-validate'}})}}
+                {{form_widget(form.authUserName, {'attr': {'class' : 'form-control', 'placeholder': 'Username', 'style':'height: 50px; width: 80%'}})}}
+                {{form_widget(form.authPassword, {'attr': {'class' : 'form-control', 'placeholder': 'Password', 'style':'height: 50px; width: 80%'}})}}
+            {{form_end(form)}}
         </div>
 
     </div>
 
     <div class="btns text-center">
     
-        <div class="sign_in_btn button col-4 col-md-4 col-lg-3 position-relative top-0 start-50 translate-middle-x">Sign In</div>
-        <div class="register_btn button col-4 col-md-4 col-lg-3 position-relative top-0 start-50 translate-middle-x">
-            <a href="/register" class="register_anchor">Register</a>
-        </div>
+        <a href="/register" class="register_anchor">
+            <div class="register_btn button col-4 col-md-4 col-lg-3 position-relative top-0 start-50 translate-middle-x">Register</div>
+        </a>
 
     </div>
 

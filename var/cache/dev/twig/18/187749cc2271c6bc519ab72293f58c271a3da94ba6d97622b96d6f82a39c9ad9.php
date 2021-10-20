@@ -27,7 +27,9 @@ class __TwigTemplate_90c50ce487560e6bbb0af2ed4ad0ba6d99a4f119d082c08843eab2b3896
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'stylesheet' => [$this, 'block_stylesheet'],
+            'session' => [$this, 'block_session'],
             'body' => [$this, 'block_body'],
+            'javascripts' => [$this, 'block_javascripts'],
         ];
     }
 
@@ -85,11 +87,12 @@ class __TwigTemplate_90c50ce487560e6bbb0af2ed4ad0ba6d99a4f119d082c08843eab2b3896
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheet"));
 
-        echo " <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 6
+        echo "    <link rel=\"stylesheet\" type=\"text/css\" href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../css/main.css"), "html", null, true);
         echo "\"/>
     <link rel=\"stylesheet\" type=\"text/css\" href=\"";
-        // line 6
+        // line 7
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../css/newQuestion.css"), "html", null, true);
         echo "\"/>
 ";
@@ -101,7 +104,49 @@ class __TwigTemplate_90c50ce487560e6bbb0af2ed4ad0ba6d99a4f119d082c08843eab2b3896
 
     }
 
-    // line 9
+    // line 10
+    public function block_session($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "session"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "session"));
+
+        // line 11
+        echo "    ";
+        if ((isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new RuntimeError('Variable "username" does not exist.', 11, $this->source); })())) {
+            // line 12
+            echo "            ";
+            echo twig_escape_filter($this->env, (isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new RuntimeError('Variable "username" does not exist.', 12, $this->source); })()), "html", null, true);
+            echo " logged in
+        ";
+        } else {
+            // line 14
+            echo "            <div class=\"register_sign_in_btn position-relative top-50 start-0 translate-middle-y col-6 col-sm-6 col-md-6 col-lg-4 row\">
+                <div class=\"sign_in_btn register_sign_in_btn_props col-6 position-relative top-50 start-50 translate-middle-x\">
+                    <a href=\"/sign-in\">Sign In</a>
+                </div>
+
+                <div class=\"register_btn register_sign_in_btn_props position-relative col-6 position-relative top-50 start-50 translate-middle-x\">
+                    <a href=\"/register\">Register</a>
+                </div>
+            </div>
+        ";
+        }
+        // line 24
+        echo "
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 27
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -111,7 +156,7 @@ class __TwigTemplate_90c50ce487560e6bbb0af2ed4ad0ba6d99a4f119d082c08843eab2b3896
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 10
+        // line 28
         echo "
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>
 
@@ -120,16 +165,38 @@ class __TwigTemplate_90c50ce487560e6bbb0af2ed4ad0ba6d99a4f119d082c08843eab2b3896
         <div id=\"new_question_background\">
             <form id=\"new_question_dialogue\">
 
-                <input type=\"text\" name=\"firstName\" placeholder=\"Enter Title Here\" class=\"ask_question_title\">
-                <i class=\"fas fa-times close_icon\"></i>
-                <textarea placeholder=\"Enter Question Here...\" class=\"ask_question_dialouge\"></textarea>
-                <button class=\"post_btn\">Post</button>
+                <div class=\"form_widget\">
+                    <i class=\"fas fa-times close_icon\"></i>
+                    ";
+        // line 38
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 38, $this->source); })()), 'form_start', ["attr" => ["no-validate" => "no-validate"]]);
+        echo "
+                        ";
+        // line 39
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 39, $this->source); })()), "question_title", [], "any", false, false, false, 39), 'widget', ["attr" => ["class" => "form-control ask_question_title", "placeholder" => "Enter Title"]]);
+        echo "
+                        ";
+        // line 40
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 40, $this->source); })()), "question", [], "any", false, false, false, 40), 'widget', ["attr" => ["class" => "form-control ask_question_dialouge", "placeholder" => "Enter Question Here.."]]);
+        echo "
+                        ";
+        // line 41
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 41, $this->source); })()), "post", [], "any", false, false, false, 41), 'widget', ["attr" => ["class" => "form-control post_btn", "placeholder" => "Enter Question Here.."]]);
+        echo "
+                    ";
+        // line 42
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 42, $this->source); })()), 'form_end');
+        echo "
+                </div>
 
+                ";
+        // line 48
+        echo "
             </form>
         </div>
 
         ";
-        // line 27
+        // line 53
         echo "
         <div class=\"search_container col-12 d-block d-sm-block d-md-block d-lg-none\">
             <i class=\"fas fa-search search_icon\"></i>
@@ -143,7 +210,7 @@ class __TwigTemplate_90c50ce487560e6bbb0af2ed4ad0ba6d99a4f119d082c08843eab2b3896
         </div>
 
         ";
-        // line 40
+        // line 66
         echo "    
         <div class=\"desktop_nav_container d-none d-sm-none d-md-none d-lg-block col-lg-4\">
             <div class=\"desktop_navbar row\">
@@ -203,7 +270,7 @@ class __TwigTemplate_90c50ce487560e6bbb0af2ed4ad0ba6d99a4f119d082c08843eab2b3896
             </div>
         </div>
         ";
-        // line 99
+        // line 125
         echo "
 
         <div class=\"desktop_rank_container d-none d-sm-none d-md-none d-lg-block col-lg-4\">
@@ -214,7 +281,7 @@ class __TwigTemplate_90c50ce487560e6bbb0af2ed4ad0ba6d99a4f119d082c08843eab2b3896
                     <span class=\"btn\">
                         <span class=\"btn-icon\">
                             <img src=\"";
-        // line 108
+        // line 134
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../assets/physics.svg"), "html", null, true);
         echo "\" class=\"radio_icon\">
                             <span class=\"btn-text\">
@@ -229,7 +296,7 @@ class __TwigTemplate_90c50ce487560e6bbb0af2ed4ad0ba6d99a4f119d082c08843eab2b3896
                     <span class=\"btn\">
                         <span class=\"btn-icon\">
                             <img src=\"";
-        // line 120
+        // line 146
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../assets/chemistry.svg"), "html", null, true);
         echo "\" class=\"radio_icon\">
                             <span class=\"btn-text\">
@@ -244,7 +311,7 @@ class __TwigTemplate_90c50ce487560e6bbb0af2ed4ad0ba6d99a4f119d082c08843eab2b3896
                     <span class=\"btn\">
                         <span class=\"btn-icon\">
                             <img src=\"";
-        // line 132
+        // line 158
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../assets/biology.svg"), "html", null, true);
         echo "\" class=\"radio_icon\">
                             <span class=\"btn-text\">
@@ -313,29 +380,27 @@ class __TwigTemplate_90c50ce487560e6bbb0af2ed4ad0ba6d99a4f119d082c08843eab2b3896
 
     </div>
 
-    <script>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
-      \$(() => {
-    
-        console.log(\"ready\");
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
-        \$(\".ask_question_btn\").on(\"click\", function(){
-            \$(\"#new_question_background\").fadeIn();
-            console.log(\"fade in\");
-        });
+    }
 
-        \$(\".close_icon\").on(\"click\", function(){
-            \$(\"#new_question_background\").fadeOut();
-            console.log(\"fade out\");
-        });
+    // line 227
+    public function block_javascripts($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        \$(\".post_btn\").on(\"click\", function(){
-            \$(\"#new_question_background\").fadeOut();
-            console.log(\"fade out\");
-        });
-     });
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-    </script>
+        // line 228
+        echo "    <script src=\"../js/addQuestion.js\"></script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -357,7 +422,7 @@ class __TwigTemplate_90c50ce487560e6bbb0af2ed4ad0ba6d99a4f119d082c08843eab2b3896
 
     public function getDebugInfo()
     {
-        return array (  248 => 132,  233 => 120,  218 => 108,  207 => 99,  147 => 40,  133 => 27,  115 => 10,  105 => 9,  93 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  403 => 228,  393 => 227,  315 => 158,  300 => 146,  285 => 134,  274 => 125,  214 => 66,  200 => 53,  194 => 48,  188 => 42,  184 => 41,  180 => 40,  176 => 39,  172 => 38,  160 => 28,  150 => 27,  139 => 24,  127 => 14,  121 => 12,  118 => 11,  108 => 10,  96 => 7,  91 => 6,  81 => 5,  62 => 3,  39 => 1,);
     }
 
     public function getSourceContext()
@@ -366,8 +431,26 @@ class __TwigTemplate_90c50ce487560e6bbb0af2ed4ad0ba6d99a4f119d082c08843eab2b3896
 
 {% block title %} Home {% endblock %} 
 
-{% block stylesheet %} <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('../css/main.css') }}\"/>
+{% block stylesheet %}
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('../css/main.css') }}\"/>
     <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('../css/newQuestion.css') }}\"/>
+{% endblock %} 
+
+{% block session %}
+    {% if (username) %}
+            {{username}} logged in
+        {% else %}
+            <div class=\"register_sign_in_btn position-relative top-50 start-0 translate-middle-y col-6 col-sm-6 col-md-6 col-lg-4 row\">
+                <div class=\"sign_in_btn register_sign_in_btn_props col-6 position-relative top-50 start-50 translate-middle-x\">
+                    <a href=\"/sign-in\">Sign In</a>
+                </div>
+
+                <div class=\"register_btn register_sign_in_btn_props position-relative col-6 position-relative top-50 start-50 translate-middle-x\">
+                    <a href=\"/register\">Register</a>
+                </div>
+            </div>
+        {% endif %}
+
 {% endblock %} 
 
 {% block body %}
@@ -379,10 +462,18 @@ class __TwigTemplate_90c50ce487560e6bbb0af2ed4ad0ba6d99a4f119d082c08843eab2b3896
         <div id=\"new_question_background\">
             <form id=\"new_question_dialogue\">
 
-                <input type=\"text\" name=\"firstName\" placeholder=\"Enter Title Here\" class=\"ask_question_title\">
-                <i class=\"fas fa-times close_icon\"></i>
+                <div class=\"form_widget\">
+                    <i class=\"fas fa-times close_icon\"></i>
+                    {{form_start(form, {'attr': {'no-validate': 'no-validate'}})}}
+                        {{form_widget(form.question_title, {'attr': {'class' : 'form-control ask_question_title', 'placeholder': 'Enter Title'}})}}
+                        {{form_widget(form.question, {'attr': {'class' : 'form-control ask_question_dialouge', 'placeholder': 'Enter Question Here..'}})}}
+                        {{form_widget(form.post, {'attr': {'class' : 'form-control post_btn', 'placeholder': 'Enter Question Here..'}})}}
+                    {{form_end(form)}}
+                </div>
+
+                {# <input type=\"text\" name=\"firstName\" placeholder=\"Enter Title Here\" class=\"ask_question_title\">
                 <textarea placeholder=\"Enter Question Here...\" class=\"ask_question_dialouge\"></textarea>
-                <button class=\"post_btn\">Post</button>
+                <button class=\"post_btn\">Post</button> #}
 
             </form>
         </div>
@@ -560,29 +651,10 @@ class __TwigTemplate_90c50ce487560e6bbb0af2ed4ad0ba6d99a4f119d082c08843eab2b3896
 
     </div>
 
-    <script>
+{% endblock %}
 
-      \$(() => {
-    
-        console.log(\"ready\");
-
-        \$(\".ask_question_btn\").on(\"click\", function(){
-            \$(\"#new_question_background\").fadeIn();
-            console.log(\"fade in\");
-        });
-
-        \$(\".close_icon\").on(\"click\", function(){
-            \$(\"#new_question_background\").fadeOut();
-            console.log(\"fade out\");
-        });
-
-        \$(\".post_btn\").on(\"click\", function(){
-            \$(\"#new_question_background\").fadeOut();
-            console.log(\"fade out\");
-        });
-     });
-
-    </script>
+{% block javascripts %}
+    <script src=\"../js/addQuestion.js\"></script>
 {% endblock %}
 ", "home.html.twig", "/Users/h4n51n_pr3m4/Desktop/hypothesis/templates/home.html.twig");
     }

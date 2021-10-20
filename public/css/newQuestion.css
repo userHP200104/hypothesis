@@ -71,10 +71,12 @@
 }
 
 .post_btn{
+    width: 130px;
+    text-align: center;
     border: 4px solid #000;
     border-radius: 8px;
     margin: 24px;
-    padding: 10px 64px;
+    padding: 10px 40px;
     background: #FFD966;
     font-weight: 700;
     float: right;
