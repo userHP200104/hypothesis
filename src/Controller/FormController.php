@@ -41,7 +41,7 @@
                 $session->set('username', $AuthorUsername);
 
 
-                return $this -> redirectToRoute('index');
+                return $this -> redirectToRoute('sign_in');
 
             }
             
