@@ -16,7 +16,11 @@ return [
         '/explore' => [[['_route' => 'explore', '_controller' => 'App\\Controller\\HomeController::explore'], null, null, null, false, false, null]],
         '/my-answers' => [[['_route' => 'myAnswers', '_controller' => 'App\\Controller\\HomeController::myAnswers'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'register', '_controller' => 'App\\Controller\\RegisterController::register'], null, null, null, false, false, null]],
+        '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
+        '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/sign-in' => [[['_route' => 'sign_in', '_controller' => 'App\\Controller\\SignInController::signIn'], null, null, null, false, false, null]],
+        '/check-user' => [[['_route' => 'user_index', '_controller' => 'App\\Controller\\UserController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/new' => [[['_route' => 'user_new', '_controller' => 'App\\Controller\\UserController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
@@ -34,9 +38,14 @@ return [
                         .')'
                         .'|(*:124)'
                     .')'
-                    .'|error/(\\d+)(?:\\.([^/]++))?(*:159)'
                 .')'
-                .'|/profile(?:/([^/]++))?(*:190)'
+                .'|/profile(?:/([^/]++))?(*:156)'
+                .'|/user/([^/]++)(*:178)'
+                .'|/([^/]++)(?'
+                    .'|/edit(*:203)'
+                    .'|(*:211)'
+                .')'
+                .'|/_error/(\\d+)(?:\\.([^/]++))?(*:248)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -46,9 +55,12 @@ return [
         101 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         114 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         124 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        159 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
-        190 => [
-            [['_route' => 'profile_view', 'id' => null, '_controller' => 'App\\Controller\\ProfileController::viewProfile'], ['id'], null, null, false, true, null],
+        156 => [[['_route' => 'profile_view', 'id' => null, '_controller' => 'App\\Controller\\ProfileController::viewProfile'], ['id'], null, null, false, true, null]],
+        178 => [[['_route' => 'user_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        203 => [[['_route' => 'user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        211 => [[['_route' => 'user_delete', '_controller' => 'App\\Controller\\UserController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        248 => [
+            [['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],
