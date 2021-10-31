@@ -20,30 +20,45 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=180, unique=true)
+     * @ORM\Column(type="string", length=255)
      */
-    private $username;
+    private $authFirstName;
 
     /**
-     * @ORM\Column(type="json")
+     * @ORM\Column(type="string", length=255)
      */
-    private $roles = [];
+    private $authLastName;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $authUserName;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $authEmail;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $authPhoneNumber;
 
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
      */
-    private $password;
+    private $authPassword;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="boolean", nullable=true , options={"default":0})
      */
-    private $website;
+    private $ban_status;
 
     /**
-     * @ORM\Column(type="text", nullable=true)
+     * @ORM\Column(type="json")
      */
-    private $details;
+    private $admin_status = [];
 
     public function getId(): ?int
     {

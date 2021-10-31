@@ -40,11 +40,6 @@ class AuthorProfile
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $authPhoneNumber;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
     private $authPassword;
 
     /**
@@ -106,18 +101,6 @@ class AuthorProfile
     public function setAuthEmail(string $authEmail): self
     {
         $this->authEmail = $authEmail;
-
-        return $this;
-    }
-
-    public function getAuthPhoneNumber(): ?string
-    {
-        return $this->authPhoneNumber;
-    }
-
-    public function setAuthPhoneNumber(string $authPhoneNumber): self
-    {
-        $this->authPhoneNumber = $authPhoneNumber;
 
         return $this;
     }

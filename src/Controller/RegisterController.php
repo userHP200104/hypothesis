@@ -13,7 +13,7 @@
     class RegisterController extends AbstractController {
 
         /**
-         * @Route("/register", name="register")
+         * @Route("/register-1", name="register")
          */
         
         public function register(Request $request) // default id value

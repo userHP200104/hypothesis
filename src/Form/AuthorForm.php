@@ -18,7 +18,6 @@ class AuthorForm extends AbstractType
             ->add('authLastName', TextType::class)
             ->add('authUserName', TextType::class)
             ->add('authEmail', EmailType::class)
-            ->add('authPhoneNumber', TextType::class)
             ->add('authPassword', PasswordType::class)
             ->add('register', SubmitType::class, ['label' => 'Register']);
     }
