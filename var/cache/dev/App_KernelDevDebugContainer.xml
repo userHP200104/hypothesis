@@ -387,6 +387,10 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
+    <service id="App\Repository\NewEntityRepository" class="App\Repository\NewEntityRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="App\Repository\QuestionsRepository" class="App\Repository\QuestionsRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
@@ -4452,7 +4456,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator..7Zulaw"/>
+      <argument type="service" id=".service_locator.S9dFwGv"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -5672,6 +5676,8 @@
     <service id=".abstract.instanceof.App\Repository\AnswersRepository" class="App\Repository\AnswersRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\AuthorProfileRepository" class="App\Repository\AuthorProfileRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\AuthorProfileRepository" class="App\Repository\AuthorProfileRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\NewEntityRepository" class="App\Repository\NewEntityRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\NewEntityRepository" class="App\Repository\NewEntityRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\QuestionsRepository" class="App\Repository\QuestionsRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\QuestionsRepository" class="App\Repository\QuestionsRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" abstract="true"/>
@@ -6287,11 +6293,12 @@
       <argument type="service" id="cache.doctrine.orm.default.result"/>
       <factory class="Doctrine\Common\Cache\Psr6\DoctrineProvider" method="wrap"/>
     </service>
-    <service id=".service_locator..7Zulaw" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.S9dFwGv" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\AnswersRepository" type="service_closure" id="App\Repository\AnswersRepository"/>
         <argument key="App\Repository\AuthorProfileRepository" type="service_closure" id="App\Repository\AuthorProfileRepository"/>
+        <argument key="App\Repository\NewEntityRepository" type="service_closure" id="App\Repository\NewEntityRepository"/>
         <argument key="App\Repository\QuestionsRepository" type="service_closure" id="App\Repository\QuestionsRepository"/>
         <argument key="App\Repository\UserRepository" type="service_closure" id="App\Repository\UserRepository"/>
       </argument>
